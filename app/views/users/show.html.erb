@@ -1,0 +1,14 @@
+<!-- app/views/users/show.html.erb -->
+
+<h1>ユーザ詳細</h1>
+
+<div>
+  <p>名前: <%= @user_show.first_name %></p>
+  <p>苗字: <%= @user_show.family_name %></p>
+</div>
+<%= link_to "編集", edit_user_path(@user_show.id) %> |
+<%= link_to "削除", @user_show, data: { turbo_method: :delete } %>
+<hr> <!-- 水平線を追加 -->
+
+<%= link_to "一覧ページ", root_path %> |
+<%= link_to "登録ページ", users_new_path %>

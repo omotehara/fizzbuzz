@@ -1,0 +1,13 @@
+<!-- app/views/users/new.html.erb -->
+
+<h1>ユーザ登録</h1>
+<%= form_with model: @user do |f| %>
+  <div>
+      <p>名前: <%= f.text_field :first_name %></p>
+      <p>苗字: <%= f.text_field :family_name %></p>
+  </div>
+  
+  <%= f.submit '登録' %>
+<% end %>
+
+<%= link_to "一覧ページ", root_path %>

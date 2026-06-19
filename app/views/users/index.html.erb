@@ -1,0 +1,15 @@
+<!-- app/views/users/index.html.erb -->
+
+<h1>一覧ページ</h1>
+<% @users.each do |user| %>
+  <div>
+    <p>氏名: <%= user.id %>　<%= user.first_name %> <%= user.family_name %></p>
+  </div>
+
+  <!-- 詳細画面へのリンク -->
+  <%= link_to "詳細ページ", user_path(user.id) %>
+
+  <hr> <!-- 水平線で区切る -->
+<% end %>
+
+<%= link_to "登録ページ", users_new_path %>

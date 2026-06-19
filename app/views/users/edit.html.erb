@@ -1,0 +1,15 @@
+<!-- app/views/users/edit.html.erb -->
+
+<h1>ユーザ編集</h1>
+<%= form_with model: @user_edit do |f| %>
+  <div>
+    <p>名前: <%= f.text_field :first_name %></p>
+    <p>苗字: <%= f.text_field :family_name %></p>
+  </div>
+
+  <%= f.submit '更新' %>
+<% end %>
+
+<hr> <!-- 水平線を追加 -->
+
+<%= link_to "詳細ページ", user_path(@user_edit.id) %>
